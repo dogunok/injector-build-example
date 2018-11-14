@@ -13,13 +13,20 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "date-and-time": "^0.6.3",
-    "gulp-util": "^3.0.8",
-    "gulp-ws-sender": "^1.0.0",
-    "through2": "^3.0.0",
     "ws": "^6.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
     "gulp": "^4.0.0",
-    "gulp-live-server": "0.0.31"
+    "gulp-babel": "^8.0.0",
+    "gulp-live-server": "0.0.31",
+    "gulp-ws-sender": "^1.0.0"
+  },
+  
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ]
   }
 }
