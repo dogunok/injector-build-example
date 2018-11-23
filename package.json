@@ -14,9 +14,10 @@
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
-    "gulp-live-server": "0.0.31",
-    "gulp-ws-sender": "^1.1.0"
+    "gulp-sass": "^4.0.2",
+    "gulp-ws-sender": "^1.1.1"
   },
   "babel": {
     "presets": [

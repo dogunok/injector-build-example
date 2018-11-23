@@ -1,0 +1,7 @@
+body {
+  transform: rotate(3deg);
+
+  & div {
+    display: flex;
+  }
+}
