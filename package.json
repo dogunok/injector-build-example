@@ -17,11 +17,6 @@
     "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-sass": "^4.0.2",
-    "gulp-ws-sender": "^1.1.1"
-  },
-  "babel": {
-    "presets": [
-      "@babel/env"
-    ]
+    "gulp-ws-sender": "^1.2.0"
   }
 }
