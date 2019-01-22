@@ -1,2 +1,7 @@
 node_modules
 .DS_Store
+src/*.html
+src/*.js
+src/*.scss
+src/*.css
+build

@@ -1,12 +1,15 @@
 const gulp = require('gulp')
-const babel = require('gulp-babel')
+const browserify = require('browserify')
+const babelify = require('babelify')
+const source = require('vinyl-source-stream')
+const buffer = require('vinyl-buffer')
 const sass = require('gulp-sass')
 const autoprefixer = require('gulp-autoprefixer')
 const sender = require('gulp-ws-sender')(9998)
-// const sender = require('gulp-ws-sender')(9995)
 
 const path = {
   js: 'src/**/*.js',
+  jsEntry: 'src/index.js',
   scss: 'src/**/*.scss',
   build: 'build',
 }
@@ -20,9 +23,11 @@ gulp.task('scss', () => {
 })
 
 gulp.task('script', () => {
-  return gulp.src(path.js)
-    .pipe(babel())
-    .pipe(sender({ type: 'js', waitForKam: true }))
+  return browserify( path.jsEntry, { transform: [babelify] })
+    .bundle()
+    .pipe(source('bundle.js'))
+    .pipe(buffer())
+    .pipe(sender({ type: 'js' }))
     .pipe(gulp.dest(path.build))
 })
 
@@ -30,6 +35,5 @@ gulp.task('watchAll', () => {
   gulp.watch(path.scss, gulp.series('scss'))
   gulp.watch(path.js, gulp.series('script'))
 })
-
 
 gulp.task('default', gulp.parallel('watchAll'))
