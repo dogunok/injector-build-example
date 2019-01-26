@@ -3,7 +3,6 @@ const babel = require('gulp-babel')
 const sass = require('gulp-sass')
 const autoprefixer = require('gulp-autoprefixer')
 const sender = require('gulp-ws-sender')(9998)
-// const sender = require('gulp-ws-sender')(9995)
 
 const path = {
   js: 'src/**/*.js',
@@ -30,6 +29,5 @@ gulp.task('watchAll', () => {
   gulp.watch(path.scss, gulp.series('scss'))
   gulp.watch(path.js, gulp.series('script'))
 })
-
 
 gulp.task('default', gulp.parallel('watchAll'))
