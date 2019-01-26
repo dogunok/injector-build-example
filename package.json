@@ -1,14 +1,12 @@
 {
-  "name": "extention",
+  "name": "build-example",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/gulp"
   },
   "keywords": [],
-  "author": "",
+  "author": "rozov1",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -18,7 +16,7 @@
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-sass": "^4.0.2",
-    "gulp-ws-sender": "^1.2.0",
+    "gulp-ws-sender": "^1.2.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   }
